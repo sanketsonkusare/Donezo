@@ -2,9 +2,11 @@ import { useState } from 'react';
 import './App.css';
 import Modal from './Modal';
 import Signup from './Signup';
+import Login from './Login';
 
 function App() {
     const [isSignupOpen, setIsSignupOpen] = useState(false);
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
 
     return (
         <>
@@ -20,12 +22,18 @@ function App() {
                 >
                     Signup
                 </button>
-                <button className="border-3 border-green-500 hover:bg-green-900 text-white py-2 px-4">
+                <button
+                    className="border-3 border-green-500 hover:bg-green-900 text-white py-2 px-4"
+                    onClick={() => setIsLoginOpen(true)}
+                >
                     Login
                 </button>
             </div>
             <Modal isOpen={isSignupOpen} onClose={() => setIsSignupOpen(false)}>
                 <Signup />
+            </Modal>
+            <Modal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}>
+                <Login />
             </Modal>
         </>
     );
