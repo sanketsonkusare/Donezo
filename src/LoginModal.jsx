@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Modal({ isOpen, onClose, children }) {
+export default function LoginModal({ isOpen, onClose, children }) {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import Modal from './Modal';
+import LoginModal from './LoginModal';
 import Signup from './Signup';
 import Login from './Login';
 
@@ -32,12 +32,12 @@ function App() {
                             Login
                         </button>
                     </div>
-                    <Modal isOpen={isSignupOpen} onClose={() => setIsSignupOpen(false)}>
+                    <LoginModal isOpen={isSignupOpen} onClose={() => setIsSignupOpen(false)}>
                         <Signup />
-                    </Modal>
-                    <Modal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}>
+                    </LoginModal>
+                    <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}>
                         <Login />
-                    </Modal>
+                    </LoginModal>
                 </div>
             </div>
         </>
