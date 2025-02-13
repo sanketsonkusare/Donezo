@@ -66,7 +66,15 @@ export default function Tasks() {
                         </select>
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Date</label>
+                        <label className="block text-sm font-medium text-gray-700">Categories</label>
+                        <select className="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                            <option>Personal</option>
+                            <option>Work</option>
+                            <option>Health</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700">Due Date</label>
                         <input type="date" className="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
                     </div>
                     <button type="submit" className="bg-blue-500 text-white rounded p-2">Add Task</button>

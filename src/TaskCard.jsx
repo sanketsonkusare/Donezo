@@ -7,10 +7,10 @@ export default function TaskCard() {
             <p className="text-lg mb-4">Description</p>
             <div className="flex items-center space-x-4 mt-2">
                 <Dropdown label="Status" options={["to-do","In progress","Completed"]}/>
-                <button className="bg-gray-700 text-white rounded w-1/2 p-3">Date</button>
+                <Dropdown label="Categories" options={["personal","Work","Health"]}/>
             </div>
             <div className="flex items-center space-x-4 mt-2">
-                <Dropdown label="Categories" options={["personal","Work","Health"]}/>
+                <button className="bg-gray-700 text-white rounded w-1/2 p-3">Date</button>
                 <button className="bg-gray-700 text-white rounded w-1/2 p-3">Edit</button>
             </div>
             <button className="bg-gray-700 text-white rounded w-full p-3 mt-2">Done</button>
